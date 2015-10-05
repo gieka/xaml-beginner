@@ -7,6 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton Icon="Home" Label="Home" Click="appBarHome_click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -20,6 +28,10 @@
             <ColumnDefinition Width="23*"/>
             <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
+        <ListView 
+            Grid.Row="1" Grid.RowSpan="3" BorderThickness="10" Background="Black"/>
+        <ListView 
+            Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" BorderThickness="10"/>
         <TextBlock
             Text="Special Requests:"
             Grid.Column="1"
@@ -32,14 +44,14 @@
             Grid.Row="1"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" FontSize="32"/>
-        <TextBlock
-            Text="**Add to Order**"
+        <Button
+            Content="Add to Order"
             Grid.Column="0"
             Grid.Row="4"
             HorizontalAlignment="Center"
             VerticalAlignment="Center" FontSize="32"/>
-        <TextBlock
-            Text="**Submit Order**"
+        <Button
+            Content="Submit Order"
             Grid.Column="1"
             Grid.Row="4"
             Grid.ColumnSpan="2"
