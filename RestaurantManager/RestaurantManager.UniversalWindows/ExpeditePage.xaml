@@ -20,15 +20,13 @@
             <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <GridView>
-            
-        </GridView>
+        <ListView>
+            <GridView DataContext="DataManager" ItemsSource="{Binding OrderItems, Source={StaticResource DataManager}}" />
+        </ListView>
         <Button
             Content="Clear All Orders"
             HorizontalAlignment="Center"
             Grid.Row="1"
-            VerticalAlignment="Center" 
-            FontSize="32"/>
-
+            VerticalAlignment="Center" />
     </Grid>
 </Page>

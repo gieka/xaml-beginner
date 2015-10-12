@@ -29,33 +29,35 @@
             <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
         <ListView 
-            Grid.Row="1" Grid.RowSpan="3" BorderThickness="10" Background="Black"/>
+            Grid.Row="1" Grid.RowSpan="3" BorderThickness="10" Background="Black"
+            DataContext="DataManager" ItemsSource="{Binding MenuItems, Source={StaticResource DataManager}}" />
         <ListView 
-            Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" BorderThickness="10"/>
+            Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" BorderThickness="10"
+            DataContext="DataManager" ItemsSource="{Binding CurrentlySelectedMenuItems, Source={StaticResource DataManager}}"/>
         <TextBlock
             Text="Special Requests:"
             Grid.Column="1"
             Grid.Row="1"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" FontSize="32"/>
+            VerticalAlignment="Top" />
         <TextBlock
             Text="Order Items:"
             Grid.Column="2"
             Grid.Row="1"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top" FontSize="32"/>
+            VerticalAlignment="Top" />
         <Button
             Content="Add to Order"
             Grid.Column="0"
             Grid.Row="4"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" FontSize="32"/>
+            VerticalAlignment="Center" />
         <Button
             Content="Submit Order"
             Grid.Column="1"
             Grid.Row="4"
             Grid.ColumnSpan="2"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" FontSize="32"/>
+            VerticalAlignment="Center" />
     </Grid>
 </Page>
